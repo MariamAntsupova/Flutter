@@ -12,15 +12,18 @@ class _MainScreenQueryState extends State<MainScreenQuery> {
   Widget build(BuildContext context) {
     return Container(
         child: Row(children: <Widget>[
-          Container(child: Image.network('$image'), height: 200, width: 200 , margin: EdgeInsets.symmetric(horizontal: 10.0)
-          ),
-          Container(
-              child: Text('$text',
-                  style: TextStyle(
-                    fontSize: 30.0,
-                  )),
-              margin: EdgeInsets.symmetric(horizontal: 20.0)
-          ),
+          Column(children: [
+            Container(child: Image.network('$image'), height: 200, width: 200 , margin: EdgeInsets.symmetric(vertical: 10.0)
+            ),
+            Container(
+                child: Text('$text',
+                    style: TextStyle(
+                      fontSize: 30.0,
+                    )),
+                margin: EdgeInsets.symmetric(horizontal: 60.0)
+            ),
+          ]),
+
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -33,7 +36,7 @@ class _MainScreenQueryState extends State<MainScreenQuery> {
                   },
                   child: Text('Venera',
                       style: TextStyle(
-                        fontSize: 25,
+                        fontSize: 30,
                       )),
                   textColor: Colors.white,
                   color: Colors.black
@@ -47,7 +50,7 @@ class _MainScreenQueryState extends State<MainScreenQuery> {
                   },
                   child: Text('Mercury',
                       style: TextStyle(
-                        fontSize: 25,
+                        fontSize: 30,
                       )),
                   textColor: Colors.white,
                   color: Colors.black
@@ -61,7 +64,7 @@ class _MainScreenQueryState extends State<MainScreenQuery> {
                   },
                   child: Text('Mars',
                       style: TextStyle(
-                        fontSize: 25,
+                        fontSize: 30,
                       )),
                   textColor: Colors.white,
                   color: Colors.black
